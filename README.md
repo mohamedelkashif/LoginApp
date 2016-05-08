@@ -2,13 +2,8 @@
 
 #.env files
 
-After cloning you have to go to project folder from cmd and update the composer by the following command
-```
-composer update
-```
 
-
-Create a file called it .env like the file found in the project which is called .env.example the copy and paste the folllowing in it:
+Create a file and  call it .env like the file found in the project which is called .env.example then copy and paste the folllowing in it:
 ```
 APP_ENV=local
 APP_DEBUG=true
@@ -37,15 +32,33 @@ MAIL_ENCRYPTION=tls
 
 GOOGLE_APP_ID=413720293952-2v8ivhue13493310p95ok4oc22q5a4vl.apps.googleusercontent.com
 GOOGLE_APP_SECRET=diCr10I-3td4j1EFh6etJHWR
-GOOGLE_REDIRECT=http://localhost:8000/auth/google/callback
+GOOGLE_REDIRECT=http://localhost.com:8000/auth/google/callback
 GOOGLE_AUTH_PROVIDER=https://www.googleapis.com/oauth2/v1/certs
 SCOPE=https://www.googleapis.com/auth/userinfo.profile
 
 ```
-After that open your cmd and go to your project folder and write the following
+
+You have to install composer on your local machine from the following site: https://getcomposer.org/
+Navigate to your project folder and wirte the following command:
+
+
+After that open your cmd or Github shell and go to your project folder and write the following
+```
+composer install
+```
+
+The write the following commands:
 
 ```
 php artisan key:generate
 php artisan cache:clear
 php artisan config:cache
 ```
+Now you can run the application by writing the following command :
+```
+php artisan serve
+```
+The following link will appear: localhost:8000
+
+
+
