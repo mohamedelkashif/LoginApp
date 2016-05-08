@@ -61,4 +61,63 @@ php artisan serve
 The following link will appear: localhost:8000
 
 
+In case you want to run the app on a server on virtual machine, you have too do the following:
+
+1- Download and Install vagrant from https://www.vagrantup.com/
+2- Download and install Oracle virtual box from https://www.virtualbox.org/
+3- Navigate to your project folder using Github shell and write the following commanf
+   ```
+   vagrant init
+   ```
+   Then write the following command
+   ```
+   vagrant box add precise64 http://files.vagrantup.com/precise64.box
+   ```
+   It will take some time to download and install the Ubuntu server depends on the speed of the internet connection
+
+ 4- You have to make sure that Client SSH is found in your Variable PATH, if not you have to add the following to your PATH
+ ```
+ C:\Program Files\Git\usr\bin\ssh.exe   
+```
+5- Write the following commands:
+    ```
+   1- vagrant up
+   2- vagrant ssh
+   ```
+This should log you into the server 
+Now you can set up basic configuration for the server by the following commands:
+
+```
+sudo apt-get update
+sudo apt-get install python-software-properties
+add-apt-repository ppa:ondrej/php5-5.6
+apt-get -y update
+apt-get -y install php5 php5-mhash php5-mcrypt php5-curl php5-cli php5-mysql php5-gd php5-intl php5-xsl php5-bcmath
+apt-get install -y apache2
+sudo service apache2 restart
+sudo apt-get install php5-sqlite
+```
+To install composer, write the following commands:
+```
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '92102166af5abdb03f49ce52a40591073a7b859a86e8ff13338cf7db58a19f7844fbc0bb79b2773bf30791e935dbd938') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
+6- The last thing is that you have to write the following line in that folder C:\Windows\System32\drivers\etc 
+```
+192.168.33.101  localhost.com
+```
+To run the application navigate to vagrant so you have something like this
+```
+vagrant@precise64:~$ cd /vagrant
+```
+Then write the following:
+```
+php artisan serve --host 192.168.33.101
+```
+
+so you can go to the app through :
+
+http://localhost.com:8000/
 
