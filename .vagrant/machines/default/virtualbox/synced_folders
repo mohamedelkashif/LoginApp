@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Mohamed/Documents/GitHub/LoginApp","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/var/www":{"guestpath":"/var/www","hostpath":"C:/Users/Mohamed/Documents/GitHub/LoginApp/www","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Mohamed/Documents/GitHub/LoginApp","disabled":false,"__vagrantfile":true}}}
