@@ -29,4 +29,4 @@ Route::get('home','logincontroller@index');
 Route::get('/{confirmationCode}','signupController@confirmationState');
 Route::post('/emailconf','signupController@postConfirmation');
 
-Route::get('getlogged','logincontroller@login');
+//Route::get('getlogged','logincontroller@login');
