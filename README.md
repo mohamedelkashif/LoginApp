@@ -4,7 +4,7 @@
 
 Create a file called it .env like the file found in the project which is called .env.example the copy and paste the folllowing in it:
 ```
-<hr>APP_ENV=local</hr>
+APP_ENV=local
 APP_DEBUG=true
 APP_KEY=qhl1IMkcYuhbwIrwGSPREb9fEU3cMtpK
 
@@ -35,4 +35,10 @@ GOOGLE_REDIRECT=http://localhost:8000/auth/google/callback
 GOOGLE_AUTH_PROVIDER=https://www.googleapis.com/oauth2/v1/certs
 SCOPE=https://www.googleapis.com/auth/userinfo.profile
 
+```
+After that open your cmd and go to your project folder and write the following
+
+```
+php artisan cache:clear
+php artisan config:cache
 ```
