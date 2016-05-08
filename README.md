@@ -2,9 +2,9 @@
 
 #.env files
 
-Create a file called it .env like the file found in the project which is called .env.example the copy and paste the folllowing in it
+Create a file called it .env like the file found in the project which is called .env.example the copy and paste the folllowing in it:
 
-APP_ENV=local
+##APP_ENV=local
 APP_DEBUG=true
 APP_KEY=qhl1IMkcYuhbwIrwGSPREb9fEU3cMtpK
 
