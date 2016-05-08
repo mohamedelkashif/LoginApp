@@ -80,10 +80,14 @@ In case you want to run the app on a server on virtual machine, you have too do 
  C:\Program Files\Git\usr\bin\ssh.exe   
 ```
 5- Write the following commands:
-    ```
-    vagrant up
-    vagrant ssh
-   ```
+```
+ vagrant up
+ ```
+ ```
+ vagrant ssh
+```
+
+
 This should log you into the server 
 Now you can set up basic configuration for the server by the following commands:
 
