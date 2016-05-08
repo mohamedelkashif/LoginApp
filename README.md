@@ -2,6 +2,12 @@
 
 #.env files
 
+After cloning you have to go to project folder from cmd and update the composer by the following command
+```
+composer update
+```
+
+
 Create a file called it .env like the file found in the project which is called .env.example the copy and paste the folllowing in it:
 ```
 APP_ENV=local
@@ -39,6 +45,7 @@ SCOPE=https://www.googleapis.com/auth/userinfo.profile
 After that open your cmd and go to your project folder and write the following
 
 ```
+php artisan key:generate
 php artisan cache:clear
 php artisan config:cache
 ```
